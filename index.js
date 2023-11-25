@@ -12,26 +12,7 @@ const localHost = 'http://localhost:8080/';
   const page = await browser.newPage();
   console.log("hello")
 
-  // page.on('console', async msg => {
-  //   if (msg.type() === 'error' && msg.text().includes('GetFlightError') && page.url().includes('united.com')) {
-  //     console.log('Specific console error occurred on United page. Reloading the page...');
-  //     await page.reload();
-  //   }
-  // });
-  // try {
-  //   await page.goto('https://www.united.com/en/us/fsr/choose-flights?f=LAX&t=TYO&d=2024-01-26&tt=1&at=1&sc=7&px=1&taxng=1&newHP=True&clm=7&st=bestmatches&tqp=A');
-  // } catch (error) {
-  //   console.log('Error occurred while navigating. Reloading the page...');
-  //   await page.reload();
-  // }
-  // await page.waitForSelector('div[class="app-components-Shopping-Miles-styles__fontStyle--U52XW"]');
-
-  // const htmlContent = fs.readFileSync('./temp.html', 'utf8');
-  // await page.setContent(htmlContent);
-
   await page.goto(URL_3);
-  // await page.goto('http://localhost:8080/');
-
 
   await page.waitForSelector('div[class="app-components-Shopping-Miles-styles__fontStyle--U52XW"]');
   await page.waitForTimeout(5000); // waits for 5 seconds
