@@ -4,11 +4,14 @@
   "description": "playwright project",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "dev": "node index.js"
   },
   "author": "Yash Khade",
   "license": "ISC",
   "dependencies": {
     "playwright": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=20.2.0"
   }
 }
