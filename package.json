@@ -1,0 +1,14 @@
+{
+  "name": "awards-scraper",
+  "version": "1.0.0",
+  "description": "playwright project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Yash Khade",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
