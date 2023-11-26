@@ -1,5 +1,22 @@
 const playwright = require('playwright');
 
+// Breaking Down the United URL
+/** example URL https://www.united.com/en/us/fsr/choose-flights?f=SFO&t=LGA&d=2024-01-26&tt=1&at=1&sc=7&px=1&taxng=1&newHP=True&clm=7&st=bestmatches&tqp=A
+ * f=SFO: This is the departure airport code. In this case, SFO stands for San Francisco International Airport.
+ * t=LGA: This is the arrival airport code. LGA stands for LaGuardia Airport in New York.
+ * d=2024-01-26: This is the departure date for the flight, formatted as YYYY-MM-DD.
+ * tt=1: trip type. The value 1 indicates a one-way trip.
+ * at=1: adults traveling.
+ * sc=7: ???
+ * px=1: Passenger Count? The value 1 indicates one passenger.
+ * taxng=1: taxes and fees are included in the price.
+ * newHP=True: A flag, indicating the use of a new homepage or layout.
+ * clm=7: ???
+ * st=bestmatches: This parameter could indicate the sorting order of the search results. In this case, it might be sorted by the best matches.
+ * tqp=A: I have no IDEA, it gets appended to the end of the URL no matter what.
+ */
+
+
 // Constants
 const URL_1 = 'https://www.united.com/en/us/fsr/choose-flights?f=LAX&t=TYO&d=2024-01-26&tt=1&at=1&sc=7&px=1&taxng=1&newHP=True&clm=7&st=bestmatches&tqp=A';
 const URL_2 = 'https://www.united.com/en/us/fsr/choose-flights?f=SFO&t=TYO&d=2024-01-26&tt=1&at=1&sc=7&px=1&taxng=1&newHP=True&clm=7&st=bestmatches&tqp=A';
@@ -8,7 +25,7 @@ const localHost = 'http://localhost:8080/';
 
 
 (async () => {
-  const browser = await playwright.firefox.launch({headless: true});
+  const browser = await playwright.firefox.launch({headless: false});
   const page = await browser.newPage();
   console.log("hello")
 
