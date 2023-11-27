@@ -41,6 +41,8 @@ class UnitedScraper extends BaseScraper {
       i++;
     }
 
+    // TODO: Write to DB
+
     console.log(flightInfo);
 
 
