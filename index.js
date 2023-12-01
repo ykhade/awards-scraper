@@ -6,7 +6,7 @@ const DeltaScraper = require('./delta-scraper/delta-scraper');
 
 (async () => {
   //write a timer to time how long it takes to scrape
-  console.time('Scraping Time');
+
   // TODO: Make these parameters dynamic
   // TODO: Switch to use different scrapers based on airline
   const departureAirport = 'SFO';
@@ -17,6 +17,7 @@ const DeltaScraper = require('./delta-scraper/delta-scraper');
 
 
   for (let airline in airlines){
+    console.time(`${airline} Scraping Time`);
     let shouldScrapeAirline = airlines[airline]
 
     if (shouldScrapeAirline){
