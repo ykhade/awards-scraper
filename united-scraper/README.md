@@ -21,9 +21,6 @@ The ```scrape``` method returns a promise that resolves to the data object.
   ...
 }
 ```
-> [!NOTE]
-> 
-> This is a test note
 
 /** example URL https://www.united.com/en/us/fsr/choose-flights?f=SFO&t=LGA&d=2024-01-26&tt=1&at=1&sc=7&px=1&taxng=1&newHP=True&clm=7&st=bestmatches&tqp=A
 * f=SFO: This is the departure airport code. In this case, SFO stands for San Francisco International Airport.
