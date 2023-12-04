@@ -1,11 +1,9 @@
 const axios = require("axios");
-const {deltaRequestBody, testRequestBody} = require("./util");
+const {deltaGuestRequestBody} = require("./util");
 const {inspect} = require("util");
 class DeltaScraper {
-  constructor(departureAirport, arrivalAirport, departureDate, authToken) {
-    this.theBody = deltaRequestBody(departureAirport, arrivalAirport, departureDate)
-    this.theBody = testRequestBody;
-    this.token = authToken;
+  constructor(departureTime, destinationAirportCode, originAirportCode) {
+    this.theGuestBody = deltaGuestRequestBody(departureTime, destinationAirportCode, originAirportCode);
   }
   async makeRequest() {
     const url = 'https://offer-api-prd.delta.com/prd/rm-offer-gql';
@@ -14,11 +12,11 @@ class DeltaScraper {
       channelId: 'DCOM',
       applicationId: 'DC',
       'User-Agent': 'Mozilla/5.0',
-      'Authorization': `Bearer ${this.token}`,
+      'Authorization': `GUEST`,
     };
 
     try {
-      const response = await axios.post(url, this.theBody, { headers });
+      const response = await axios.post(url, this.theGuestBody, { headers });
       console.log(inspect(response.data, { depth: null, colors: true }));
       return response.data;
     } catch (error) {
@@ -26,5 +24,6 @@ class DeltaScraper {
     }
   }
 }
+
 
 module.exports = DeltaScraper;
