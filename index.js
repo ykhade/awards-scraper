@@ -8,16 +8,15 @@ const DeltaScraper = require('./delta-scraper/delta-scraper');
   console.time('Scraping Time');
   // TODO: Make these parameters dynamic
   // TODO: Switch to use different scrapers based on airline
-  const departureAirport = 'SFO';
-  const arrivalAirport = 'LGA';
-  const departureDateUnited = '2024-01-26';
-  const departureDateDelta = '2024-10-21T00:00:00';
-  const authToken = '<BEARER TOKEN>'
+  const departureAirport = "LAX";
+  const arrivalAirport = "HND";
+  const departureDateUnited = "2024-01-26";
+  const departureDateDelta = "2024-02-19T00:00:00";
 
   // const unitedScraper = new UnitedScraper(departureAirport, arrivalAirport, departureDateUnited);
   // await unitedScraper.scrape();
 
-  const deltaScraper = new DeltaScraper(departureAirport, arrivalAirport, departureDateDelta, authToken);
+  const deltaScraper = new DeltaScraper(departureDateDelta, arrivalAirport, departureAirport);
   await deltaScraper.makeRequest();
   console.timeEnd('Scraping Time');
 })();
