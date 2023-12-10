@@ -10,3 +10,5 @@ Web scraping flight awards
 Check `index.js` for the main code. Change the `url` variable to the desired URL.
 
 for Vic
+for everyone else
+https://docs.google.com/document/d/1Pdq-j62iLRkBck3fOXNLx4gdf9jUlstFw4AKctgGhDw/edit?usp=sharing
