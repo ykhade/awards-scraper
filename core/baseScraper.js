@@ -17,7 +17,7 @@ class BaseScraper {
    * @returns {void}
    */
   launchBrowser = async() => {
-    this.browser = await playwright.firefox.launch({headless: false});
+    this.browser = await playwright.firefox.launch({headless: false });
     this.page = await this.browser.newPage();
     console.log("Browser Initialized");
   }

@@ -13,7 +13,6 @@ const DeltaScraper = require('./delta-scraper/delta-scraper');
   const arrivalAirport = "HND";
   const departureDateUnited = "2024-01-26";
   const departureDateDelta = "2024-02-19T00:00:00";
-
   for (let airline in airlines){
     console.time(`${airline} Scraping Time`);
     let shouldScrapeAirline = airlines[airline]
