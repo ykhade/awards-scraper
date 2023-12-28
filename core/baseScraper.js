@@ -26,7 +26,7 @@ class BaseScraper {
   /**
    * Navigate to a specific page.
    * @memberof BaseScraper
-   * @throws {Errox`r} If browser is not initialized. Call launchBrowser first.
+   * @throws {Error} If browser is not initialized. Call launchBrowser first.
    * @returns {Promise<void>} Resolves after navigating to the page.
    */
   goToPage = async() => {
