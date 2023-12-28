@@ -17,7 +17,7 @@ class BaseScraper {
    * @returns {void}
    */
   launchBrowser = async() => {
-    this.browser = await playwright.firefox.launch({headless: false});
+    this.browser = await playwright.firefox.launch({headless: false });
     this.page = await this.browser.newPage();
     console.log("Browser Initialized");
   }
@@ -26,7 +26,7 @@ class BaseScraper {
   /**
    * Navigate to a specific page.
    * @memberof BaseScraper
-   * @throws {Error} If browser is not initialized. Call launchBrowser first.
+   * @throws {Errox`r} If browser is not initialized. Call launchBrowser first.
    * @returns {Promise<void>} Resolves after navigating to the page.
    */
   goToPage = async() => {
